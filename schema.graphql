@@ -15,13 +15,13 @@ type PostResult {
   post: Post
 }
 
-type PostResult {
+type PostsResult {
   success: Boolean!
   errors: [String]
-  post: []Post]
+  post: [Post]
 }
 
 type Query {
-  listPosts: PostResult!
+  listPosts: PostsResult
   getPost(id: ID!): PostResult!
 }
