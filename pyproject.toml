@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "graphql-python-api"
+version = "0.0.1"
+description = "A simple Graphql API using Flask"
+authors = ["Cristiano-Rocha <sdxadev@gmail.com>"]
+readme = "README.md"
+packages = [{include = "graphql_python_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+ariadne = "^0.16.0"
+Flask-Cors = "^3.0.10"
+Flask-SQLAlchemy = "^2.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
