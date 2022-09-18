@@ -18,10 +18,10 @@ type PostResult {
 type PostsResult {
   success: Boolean!
   errors: [String]
-  post: [Post]
+  posts: [Post]
 }
 
 type Query {
-  listPosts: PostsResult
+  listPosts: PostsResult!
   getPost(id: ID!): PostResult!
 }
