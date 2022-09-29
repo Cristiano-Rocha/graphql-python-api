@@ -1,6 +1,6 @@
 # graphql-python-api
 
-This a simple Web Api using GraphQL. 
+This a simple Web Api using GraphQL.
 
 ## Tecnologies used
 
@@ -12,5 +12,19 @@ This a simple Web Api using GraphQL.
 
 
 ## 🌱 How to start this project
+
+Build the image:
+
+```code
+docker build -t graphql-python-api:latest -f graphql-python-api/Dockerfile graphql-python-api
+
+```
+
+Run the container with the following command:
+
+```code
+docker run -p 5000:5000 graphql-python-api:latest
+
+```
 
 ## Endpoints
