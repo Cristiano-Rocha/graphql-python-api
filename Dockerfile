@@ -12,10 +12,10 @@ RUN poetry install --no-interaction --no-cache --without dev -vvv --no-root
 
 
 
-FROM python AS runtime
+FROM poetry AS runtime
 ENV PATH="/app/.venv/bin:$PATH"
 COPY --from=poetry /app /app
-EXPOSE 5000
-CMD ["flask","run"]
+ENTRYPOINT ["poetry","run"]
+CMD ["flask","run","--host=0.0.0.0"]
 
 
