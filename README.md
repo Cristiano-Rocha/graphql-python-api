@@ -27,4 +27,60 @@ docker run -p 5000:5000 graphql-python-api:latest
 
 ```
 
-## Endpoints
+### Queries
+
+#### GET
+
+```code
+query GetPost {
+  getPost(id: "3"){
+    post {
+      id
+      title
+      description
+    }
+    success
+    errors
+  }
+}
+
+```
+
+#### POST
+```code
+mutation newPost {
+  createPost(
+    title: "Welcome to my Blog",
+    description:"This is a description") {
+    post {
+      id
+      title
+      description
+    }
+    success
+    errors
+  }
+}
+
+```
+
+#### DELETE
+```code
+mutation DeletePost {
+  deletePost(id: 1){
+    success
+    errors
+  }
+}
+```
+
+#### PUT
+```code
+mutation UpdatePost {
+  updatePost(id: 2,title:"This is another new night", description:"another detail of a new night"){
+    success
+    errors
+  }
+}
+
+```
